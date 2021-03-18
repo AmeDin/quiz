@@ -6,6 +6,8 @@ import { AuthContext } from "./context/auth";
 import PrivateRoute from './PrivateRoute';
 import MaiTimeSequence from './components/MaiTimeSequence';
 import HiddenPageHookMairah from './components/HiddenPageHookMairah';
+import HiddenPageMairahPt2 from './components/HiddenPageMairahPt2';
+import HiddenPageMairahFinal from './components/HiddenPageMairahFinal';
 
 function App(props) {
   const [authTokens, setAuthTokens] = useState();
@@ -21,6 +23,8 @@ function App(props) {
       <Router>
           <Route exact path="/" component={MaiTimeSequence} />
           <PrivateRoute path="/hidden" component={HiddenPageHookMairah} />
+          <Route exact path="/part2" component={HiddenPageMairahPt2} />
+          <Route exact path="/final" component={HiddenPageMairahFinal} />
       </Router>
     </AuthContext.Provider>
     </div>

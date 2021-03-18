@@ -4,13 +4,9 @@ import CSSPlugin from 'gsap/CSSPlugin';
 import { Button, Container, Row, Col, Form, FormGroup, Input,
     ModalHeader, ModalBody, Modal, Label} from 'reactstrap'
 import Loading from "./Loading";
-import mp3 from '../assets/ppbintangsurga.mp3'
-import amethyst from '../assets/trimbtbf.mp3'
-import yesImg from '../assets/ls.gif'
-import letterImg from '../assets/letter.gif'
-import writeImg from '../assets/write.gif'
-import noImg from '../assets/hb.gif'
-import axios from 'axios';
+import hijab3 from '../assets/hijab3.gif'
+import hijab9 from '../assets/hijab9.gif'
+import cat from '../assets/catmassage.gif'
 
 const C = CSSPlugin;
 
@@ -59,9 +55,6 @@ class HiddenPageV3 extends Component {
 
 		
 		this.logoTl2fun = new TimelineLite({ paused:true });
-		// this.btnBack = null
-
-		this.logoTl2end = new TimelineLite({ paused:true });
 
 		this.logoTl3 = new TimelineLite({ paused:true }); 
 		this.q1Content = null;
@@ -84,6 +77,12 @@ class HiddenPageV3 extends Component {
 		this.endline16 = null;
 		this.endline17 = null;
 		this.yesImg = null;
+
+		this.logoTl4 = new TimelineLite({ paused:true }); 
+		this.logoTl5 = new TimelineLite({ paused:true }); 
+		this.logoTl6 = new TimelineLite({ paused:true }); 
+		this.logoTl7 = new TimelineLite({ paused:true }); 
+		this.logoTl8 = new TimelineLite({ paused:true }); 
 		
     }
     
@@ -106,55 +105,51 @@ class HiddenPageV3 extends Component {
 			.set(this.content, { autoAlpha: 1 })
 			.from(this.head, 4, { top: 100, autoAlpha: 0 })
 			.to(this.head, 2, { opacity: 0, autoAlpha: 0 })
-			.from(this.linenegate, 3.5, { left: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.line1, 3.5, { left: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.line2, 2.5, { left: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.linenegate, 1.5, { left: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.line1, 1.5, { left: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.line2, 1.5, { left: -100, autoAlpha: 0 }, "-=0.25")
 			.from(this.btnContinue, 1, { scale: .5, autoAlpha: 0 }, "feature") ; 
 
 		this.logoTl2
-			.to(this.vidContent2, 1, { opacity: 0, display:"none" })
 			.set(this.vidContent, { autoAlpha: 1 })
-			.from(this.vidline1, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vidline2, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vidline3, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vidline4, 3, { right: -100, autoAlpha: 0 }, "-=0.25") 
-			.from(this.vidline5, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vidline6, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vidline7, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vidline8, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vidline9, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vidline10, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vidline11, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vidline12, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vidline13, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.btnContinueTwo, 1, { scale: .5, autoAlpha: 0 }, "feature");
+			.fromTo(this.vidContent, 0.5, {display:"none", opacity:0}, {opacity:1,display:'inline'})  
+			.from(this.vidline1, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vidline2, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vidline3, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vidline4, 2, { right: -100, autoAlpha: 0 }, "-=0.25") 
+			.from(this.vidline5, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vidline6, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vidline7, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vidline8, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vidline9, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vidline10, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vidline11, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vidline12, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vidline13, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.btnContinueTwo, 2, { scale: .5, autoAlpha: 0 }, "feature");
 			// .from(this.btnBack, 3, { scale: .5, autoAlpha: 0 }, "feature");
 
 		this.logoTl2fun
-			.to(this.vidContent, 1, { opacity: 0, display:"none" })
 			.set(this.vidContent2, { autoAlpha: 1 })
-			.from(this.vid2line0, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vid2line1, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vid2line2, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vid2line3, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vid2line4, 3, { right: -100, autoAlpha: 0 }, "-=0.25") 
-			.from(this.vid2line5, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vid2line6, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vid2line7, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vid2line8, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vid2line9, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vid2line10, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vid2line11, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.vid2line12, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
-			.from(this.btnContinueTwo2, 1, { scale: .5, autoAlpha: 0 }, "feature");
+			.fromTo(this.vidContent2, 0.5, {display:"none", opacity:0}, {opacity:1,display:'inline'})  
+			.from(this.vid2line1, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vid2line2, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vid2line3, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vid2line4, 2, { right: -100, autoAlpha: 0 }, "-=0.25") 
+			.from(this.vid2line5, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vid2line6, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vid2line7, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vid2line8, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vid2line9, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vid2line10, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vid2line11, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.vid2line12, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.btnContinueTwo2, 2, { scale: .5, autoAlpha: 0 }, "feature");
 			// .from(this.btnBack, 3, { scale: .5, autoAlpha: 0 }, "feature");
 			
-		this.logoTl2end
-		.set(this.vidContent, { autoAlpha: 1 })
-		.from(this.btnContinueTwo, 3, { scale: .5, autoAlpha: 0 }, "feature");
-		// .from(this.btnBack, 3, { scale: .5, autoAlpha: 0 }, "feature");
 
 		this.logoTl3.set(this.q1Content, { autoAlpha: 1 })
+			.fromTo(this.q1Content, 0.5, {display:"none", opacity:0}, {opacity:1,display:'inline'})  
 			.from(this.q1line1, 2,  { scale: .5, autoAlpha: 0 }, "feature") 
 			.from(this.q1line2, 2,  { scale: .5, autoAlpha: 0 }, "feature")
 			.from(this.q1line3, 2,  { scale: .5, autoAlpha: 0 }, "feature")
@@ -163,7 +158,49 @@ class HiddenPageV3 extends Component {
 			.from(this.q1line6, 2,  { scale: .5, autoAlpha: 0 }, "feature")
 			.from(this.q1line7, 2,  { scale: .5, autoAlpha: 0 }, "feature")
 			.from(this.btnContinueQ1, 2.5, { scale: .5, autoAlpha: 0 }, "feature");
+
 		
+		this.logoTl4
+			.set(this.q2Content, { autoAlpha: 1 })
+			.fromTo(this.q2Content, 0.5, {display:"none", opacity:0}, {opacity:1,display:'inline'})  
+			.from(this.hijab9, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q2line1, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q2line2, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q2line3, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q2line4, 2, { right: -100, autoAlpha: 0 }, "-=0.25") 
+			.from(this.q2line5, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q2line6, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q2line7, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q2line8, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.btnContinueQ2, 1, { scale: .5, autoAlpha: 0 }, "feature");
+			// .from(this.btnBack, 3, { scale: .5, autoAlpha: 0 }, "feature");
+
+		this.logoTl5
+			.set(this.q3Content, { autoAlpha: 1 })
+			.fromTo(this.q3Content, 0.5, {display:"none", opacity:0}, {opacity:1,display:'inline'})  
+			.from(this.hijab3, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q3line1, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q3line2, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q3line3, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q3line4, 2, { right: -100, autoAlpha: 0 }, "-=0.25") 
+			.from(this.q3line5, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.btnContinueQ3, 1, { scale: .5, autoAlpha: 0 }, "feature");
+			// .from(this.btnBack, 3, { scale: .5, autoAlpha: 0 }, "feature");
+		
+		this.logoTl6
+			.set(this.q4Content, { autoAlpha: 1 })
+			.fromTo(this.q4Content, 0.5, {display:"none", opacity:0}, {opacity:1,display:'inline'})  
+			.from(this.hijab99, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q4line1, 13, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q4line2, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q4line3, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q4line4, 2, { right: -100, autoAlpha: 0 }, "-=0.25") 
+			.from(this.q4line5, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q4line6, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.cat, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q4line7, 2, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.q4line8, 2, { right: -100, autoAlpha: 0 }, "-=0.25");
+			// .from(this.btnBack, 3, { scale: .5, autoAlpha: 0 }, "feature");
 		
 			this.bgTl.play()
 			
@@ -182,9 +219,9 @@ class HiddenPageV3 extends Component {
 			.to(this.linenegate, 0.2, { opacity: 0, autoAlpha: 0 });
 		this.logoTlB.play()
         
-        // this.onTrackPause(mp3)
 		setTimeout(() => {
 			document.querySelector(".content").style.display = "none"
+			document.querySelector(".videoContent2").style.display = "none"
 			document.querySelector(".videoContent").style.display = "inline"
 			this.logoTl2.play()
 		  }, 2000);
@@ -200,10 +237,10 @@ class HiddenPageV3 extends Component {
 			.to(this.linenegate, 0.2, { opacity: 0, autoAlpha: 0 });
 		this.logoTlB.play()
 		
-		// this.onTrackPause(mp3)
 		setTimeout(() => {
 			document.querySelector(".content").style.display = "none"
-			document.querySelector(".videoContent").style.display = "inline"
+			document.querySelector(".videoContent").style.display = "none"
+			document.querySelector(".videoContent2").style.display = "inline"
 			this.logoTl2fun.play()
 		}, 2000);
 		
@@ -265,34 +302,86 @@ class HiddenPageV3 extends Component {
 		  }, 2500);
 	}
 
-	backClick = (e) => {
-		this.logoTl2.reverse()
-		setTimeout(() => {
-			document.querySelector(".content").style.display = "inline"
-			document.querySelector(".videoContent").style.display = "none"
-			this.logoTlB.reverse()
-		  }, 1500);
-	}
-
-    
-    onTrackChange = (source) => {
-        this.setState({ isPlaying: source },function(){
-             this.refs.audio.pause();
-             this.refs.audio.load();
-             this.refs.audio.play();
-        })
-    }
-
-    onTrackPause = (source) => {
-        this.setState({ isPlaying: source },function(){
-             this.refs.audio.pause();
-        })
-    }
-
-	btnContinueQ1 = (e) => {
+	btnContinueQ1Submit = (e) => {
 		e.preventDefault();
 		console.log(document.getElementById("ansA").value)
+
+		if(
+			document.getElementById("ansA").value == 4 &&
+			document.getElementById("ansB").value == 1 &&
+			document.getElementById("ansC").value == 9 &&
+			document.getElementById("ansD").value == 9 &&
+			document.getElementById("ansE").value == 7 &&
+			document.getElementById("ansF").value == 3 
+		){
+			
+			this.logoTl3
+				.set(this.content, { autoAlpha: 1 })
+				.to(this.btnContinueQ1, 0.5, { opacity: 0, autoAlpha: 0 })
+				.to(this.q1line7, 0.2, { opacity: 0, autoAlpha: 0 })
+				.to(this.q1line6, 0.2, { opacity: 0, autoAlpha: 0 })
+				.to(this.q1line5, 0.2, { opacity: 0, autoAlpha: 0 })
+				.to(this.q1line4, 0.2, { opacity: 0, autoAlpha: 0 })
+				.to(this.q1line3, 0.2, { opacity: 0, autoAlpha: 0 })
+				.to(this.q1line2, 0.2, { opacity: 0, autoAlpha: 0 })
+				.to(this.q1line1, 0.2, { opacity: 0, autoAlpha: 0 });
+			this.logoTl3.play()
+			
+			setTimeout(() => {
+				document.querySelector(".q1Content").style.display = "none"
+				document.querySelector(".q2Content").style.display = "inline"
+				this.logoTl4.play()
+			}, 2000);
+		}
 	}
+
+	btnContinueQ2Submit = (e) => {
+		e.preventDefault();
+
+		if(
+			document.getElementById("q2Ans").value.toLowerCase() == "spa"
+		){
+			
+			this.logoTl4
+				.set(this.content, { autoAlpha: 1 })
+				.to(this.hijab9, 0.5, { opacity: 0, autoAlpha: 0 })
+				.to(this.btnContinueQ2, 0.5, { opacity: 0, autoAlpha: 0 })
+				.to(this.q2line9, 0.2, { opacity: 0, autoAlpha: 0 })
+				.to(this.q2line8, 0.2, { opacity: 0, autoAlpha: 0 })
+				.to(this.q2line7, 0.2, { opacity: 0, autoAlpha: 0 })
+				.to(this.q2line6, 0.2, { opacity: 0, autoAlpha: 0 })
+				.to(this.q2line5, 0.2, { opacity: 0, autoAlpha: 0 })
+				.to(this.q2line4, 0.2, { opacity: 0, autoAlpha: 0 })
+				.to(this.q2line3, 0.2, { opacity: 0, autoAlpha: 0 })
+				.to(this.q2line2, 0.2, { opacity: 0, autoAlpha: 0 })
+				.to(this.q2line1, 0.2, { opacity: 0, autoAlpha: 0 });
+			this.logoTl4.play()
+
+			
+			setTimeout(() => {
+				document.querySelector(".q2Content").style.display = "none"
+				document.querySelector(".q3Content").style.display = "inline"
+				this.logoTl5.play()
+			}, 2000);
+		}
+	}
+
+	btnContinueQ3Submit = (e) => {
+		e.preventDefault();
+
+		if(
+			document.getElementById("q3Ans").value.toLowerCase() == "jelita"
+		){
+			
+			setTimeout(() => {
+				document.querySelector(".q3Content").style.display = "none"
+				document.querySelector(".q4Content").style.display = "inline"
+				this.logoTl6.play()
+			}, 2000);
+		}
+	}
+
+	
 
 	onAChange = (e) => {
         this.setState({ 
@@ -354,13 +443,13 @@ class HiddenPageV3 extends Component {
 							<h2 ref={ h2 => this.vidline3 = h2 }>And also.. it will be a full day today. Habis..</h2>
 							<h2 ref={ h2 => this.vidline4 = h2 }>Tapi no worries, i shall revitalize u back</h2>
                             <h2 ref={ h2 => this.vidline5 = h2 }>So. App ini akan prompt quizzes and challenges</h2>
-                            <h2 ref={ h2 => this.vidline6 = h2 }>U kene answer to progress to the next destination</h2>
-                            <h2 ref={ h2 => this.vidline7 = h2 }>Only two test that that you'll need to pass to reach that point</h2>
+                            <h2 ref={ h2 => this.vidline6 = h2 }>U kene answer to get hint on what to do next</h2>
+                            <h2 ref={ h2 => this.vidline7 = h2 }>Three test that u need to pass to reach 1st checkpoint</h2>
                             <h2 ref={ h2 => this.vidline8 = h2 }>Tapikan.. First checkpoint end time to clear is by 3.15pm </h2>
                             <h2 ref={ h2 => this.vidline9 = h2 }>Nevertherless, I'm pretty sure my cute princess makoke</h2>
                             <h2 ref={ h2 => this.vidline10 = h2 }>Can easily breeze through it</h2>
                             <h2 ref={ h2 => this.vidline11 = h2 }>But if u need help, just let me know</h2>
-                            <h2 ref={ h2 => this.vidline12 = h2 }>I will always be there for u</h2>
+                            <h2 ref={ h2 => this.vidline12 = h2 }>I will always be here for u</h2>
                             <h2 ref={ h2 => this.vidline13 = h2 }>Let's not waste any more time and commence the game.</h2>
 							<Container>
 								<Row>
@@ -384,14 +473,14 @@ class HiddenPageV3 extends Component {
 							<h2 ref={ h2 => this.vid2line1 = h2 }>That's great!</h2>
 							<h2 ref={ h2 => this.vid2line2 = h2 }>More fun is coming up in this game.</h2>
                             <h2 ref={ h2 => this.vid2line3 = h2 }>App will prompt quizzes and challenges</h2>
-                            <h2 ref={ h2 => this.vid2line4 = h2 }>U will need to answer to progress to the next destination</h2>
-                            <h2 ref={ h2 => this.vid2line5 = h2 }>Only two test that that you'll need to pass to reach that point</h2>
+                            <h2 ref={ h2 => this.vid2line4 = h2 }>U kene answer to get hint on what to do next</h2>
+                            <h2 ref={ h2 => this.vid2line5 = h2 }>Three test that u need to pass to reach 1st checkpoint</h2>
                             <h2 ref={ h2 => this.vid2line6 = h2 }>However.. First checkpoint end time to clear is by 3.15pm </h2>
                             <h2 ref={ h2 => this.vid2line7 = h2 }>Nevertherless, I'm pretty sure my cute princess makoke</h2>
                             <h2 ref={ h2 => this.vid2line8 = h2 }>Can easily breeze through it</h2>
-                            <h2 ref={ h2 => this.vid2line9 = h2 }>A great surprise is waiting at first checkpoint </h2>
+                            <h2 ref={ h2 => this.vid2line9 = h2 }>Im confident of it</h2>
                             <h2 ref={ h2 => this.vid2line10 = h2 }>But if u need help, just let me know</h2>
-                            <h2 ref={ h2 => this.vid2line11 = h2 }>I will always be there for u</h2>
+                            <h2 ref={ h2 => this.vid2line11 = h2 }>I will always be here for u</h2>
                             <h2 ref={ h2 => this.vid2line12 = h2 }>Let's not waste any more time and commence the game.</h2>
 							<Container>
 								<Row>
@@ -418,184 +507,173 @@ class HiddenPageV3 extends Component {
                             <h2 ref={ h2 => this.q1line5 = h2 }>1a + 1b - 2c + 3d &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; + 3f = 23</h2>
                             <h2 ref={ h2 => this.q1line6 = h2 }>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; + 2d + 3e + 3f = 48</h2>
                             <h2 ref={ h2 => this.q1line7 = h2 }>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; + 3e + 4f = 33</h2>
-							<Form onSubmit={this.btnContinueQ1}>
-								<FormGroup>
-									<Container>
-										<Row>
-											<Col xs="2">
-												<Label for="A">A</Label>
-											</Col>
-											<Col xs="2">
-												<Label for="B">B</Label>
-											</Col>
-											<Col xs="2">
-												<Label for="C">C</Label>
-											</Col>
-											<Col xs="2">
-												<Label for="D">D</Label>
-											</Col>
-											<Col xs="2">
-												<Label for="E">E</Label>
-											</Col>
-											<Col xs="2">
-												<Label for="F">F</Label>
-											</Col>
-										</Row>
-										<Row>
-											<Col xs="2">
-												<Input 
-													type="text"
-													name="ansA"
-													id="ansA"
-													onChange= {this.onAChange}
-													/>
-											</Col>
-											<Col xs="2">
-												<Input 
-													type="text"
-													name="ansB"
-													id="ansB"
-													onChange= {this.onAChange}
-													/>
-											</Col>
-											<Col xs="2">
-												<Input 
-													type="text"
-													name="ansC"
-													id="ansC"
-													onChange= {this.onAChange}
-													/>
-											</Col>
-											<Col xs="2">
-												<Input 
-													type="text"
-													name="ansD"
-													id="ansD"
-													onChange= {this.onAChange}
-													/>
-											</Col>
-											<Col xs="2">
-												<Input 
-													type="text"
-													name="ansE"
-													id="ansE"
-													onChange= {this.onAChange}
-													/>
-											</Col>
-											<Col xs="2">
-												<Input 
-													type="text"
-													name="ansF"
-													id="ansF"
-													onChange= {this.onAChange}
-													/>
-											</Col>
-										</Row>
-									</Container>
-								</FormGroup>
-								<FormGroup>
-									<Button 
-										color="dark"
-										style={{marginTop: '2rem', backgroundColor: "#73b102"}}
-										block>
-										Check answer
-									</Button>
-								</FormGroup>
-							</Form>
+							<div ref={ div => this.btnContinueQ1 = div}>
+								<Form onSubmit={this.btnContinueQ1Submit}>
+									<FormGroup>
+										<Container>
+											<Row>
+												<Col xs="2">
+													<Label for="A">A</Label>
+												</Col>
+												<Col xs="2">
+													<Label for="B">B</Label>
+												</Col>
+												<Col xs="2">
+													<Label for="C">C</Label>
+												</Col>
+												<Col xs="2">
+													<Label for="D">D</Label>
+												</Col>
+												<Col xs="2">
+													<Label for="E">E</Label>
+												</Col>
+												<Col xs="2">
+													<Label for="F">F</Label>
+												</Col>
+											</Row>
+											<Row>
+												<Col xs="2">
+													<Input 
+														type="text"
+														name="ansA"
+														id="ansA"
+														onChange= {this.onAChange}
+														/>
+												</Col>
+												<Col xs="2">
+													<Input 
+														type="text"
+														name="ansB"
+														id="ansB"
+														/>
+												</Col>
+												<Col xs="2">
+													<Input 
+														type="text"
+														name="ansC"
+														id="ansC"
+														/>
+												</Col>
+												<Col xs="2">
+													<Input 
+														type="text"
+														name="ansD"
+														id="ansD"
+														/>
+												</Col>
+												<Col xs="2">
+													<Input 
+														type="text"
+														name="ansE"
+														id="ansE"
+														/>
+												</Col>
+												<Col xs="2">
+													<Input 
+														type="text"
+														name="ansF"
+														id="ansF"
+														/>
+												</Col>
+											</Row>
+										</Container>
+									</FormGroup>
+									<FormGroup>
+										<Button 
+											color="dark"
+											style={{marginTop: '2rem', backgroundColor: "#73b102"}}
+											block>
+											Check answer
+										</Button>
+									</FormGroup>
+								</Form>
+							</div>
 						</div>
 						<div className="q2Content" ref={ div => this.q2Content = div }>
+							<img ref={ img => this.hijab9 = img } src={hijab9} alt="success"  />
+                            <h2 ref={ h2 => this.q2line1 = h2 }>You've got it right!</h2>
+                            <h2 ref={ h2 => this.q2line2 = h2 }>What can 6 digit signify in singapore?</h2>
+                            <h2 ref={ h2 => this.q2line3 = h2 }>If u have that answer, u should know what to do now</h2>
+                            <h2 ref={ h2 => this.q2line4 = h2 }>And for the next question</h2>
+                            <h2 ref={ h2 => this.q2line5 = h2 }>What does a strike with the palm of the hand called?</h2>
+                            <h2 ref={ h2 => this.q2line6 = h2 }>(hint: when angry)</h2>
+                            <h2 ref={ h2 => this.q2line7 = h2 }>Then answer the word in malay pronunciation.</h2>
+                            <h2 ref={ h2 => this.q2line8 = h2 }>But without the last character and spell it in english.</h2>
+                            <h2 ref={ h2 => this.q2line9 = h2 }></h2>
+							<div ref={ div => this.btnContinueQ2 = div}>
+								<Form onSubmit={this.btnContinueQ2Submit}>
+									<FormGroup>
+										<Container>
+											<Row>
+												<Col xs="12">
+													<Input 
+														type="text"
+														name="q2Ans"
+														id="q2Ans"
+														onChange= {this.onAChange}
+														/>
+												</Col>
+											</Row>
+										</Container>
+									</FormGroup>
+									<FormGroup>
+										<Button 
+											color="dark"
+											style={{marginTop: '2rem', backgroundColor: "#73b102"}}
+											block>
+											Check answer
+										</Button>
+									</FormGroup>
+								</Form>
+							</div>
+						</div>
 						
-                            <h2 ref={ h2 => this.q2line1 = h2 }>Find a,b,c,d,e,f.</h2>
-                            <h2 ref={ h2 => this.q1line2 = h2 }>1a + 1b - 2c + 2d - 1e + 2f = 4</h2>
-                            <h2 ref={ h2 => this.q1line3 = h2 }>1a + 2b - 1c + 1d - 2e + 3f = 1</h2>
-                            <h2 ref={ h2 => this.q1line4 = h2 }>&nbsp; &nbsp;&nbsp;&thinsp; - 3b - 2c&thinsp; - 1d + 1e - 1f = -26</h2>
-                            <h2 ref={ h2 => this.q1line5 = h2 }>1a + 1b - 2c + 3d &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; + 3f = 23</h2>
-                            <h2 ref={ h2 => this.q1line6 = h2 }>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; + 2d + 3e + 3f = 48</h2>
-                            <h2 ref={ h2 => this.q1line7 = h2 }>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; + 3e + 4f = 33</h2>
-							<Form onSubmit={this.btnContinueQ1}>
-								<FormGroup>
-									<Container>
-										<Row>
-											<Col xs="2">
-												<Label for="A">A</Label>
-											</Col>
-											<Col xs="2">
-												<Label for="B">B</Label>
-											</Col>
-											<Col xs="2">
-												<Label for="C">C</Label>
-											</Col>
-											<Col xs="2">
-												<Label for="D">D</Label>
-											</Col>
-											<Col xs="2">
-												<Label for="E">E</Label>
-											</Col>
-											<Col xs="2">
-												<Label for="F">F</Label>
-											</Col>
-										</Row>
-										<Row>
-											<Col xs="2">
-												<Input 
-													type="text"
-													name="ansA"
-													id="ansA"
-													onChange= {this.onAChange}
-													/>
-											</Col>
-											<Col xs="2">
-												<Input 
-													type="text"
-													name="ansB"
-													id="ansB"
-													onChange= {this.onAChange}
-													/>
-											</Col>
-											<Col xs="2">
-												<Input 
-													type="text"
-													name="ansC"
-													id="ansC"
-													onChange= {this.onAChange}
-													/>
-											</Col>
-											<Col xs="2">
-												<Input 
-													type="text"
-													name="ansD"
-													id="ansD"
-													onChange= {this.onAChange}
-													/>
-											</Col>
-											<Col xs="2">
-												<Input 
-													type="text"
-													name="ansE"
-													id="ansE"
-													onChange= {this.onAChange}
-													/>
-											</Col>
-											<Col xs="2">
-												<Input 
-													type="text"
-													name="ansF"
-													id="ansF"
-													onChange= {this.onAChange}
-													/>
-											</Col>
-										</Row>
-									</Container>
-								</FormGroup>
-								<FormGroup>
-									<Button 
-										color="dark"
-										style={{marginTop: '2rem', backgroundColor: "#73b102"}}
-										block>
-										Check answer
-									</Button>
-								</FormGroup>
-							</Form>
+						<div className="q3Content" ref={ div => this.q3Content = div }>
+							<img ref={ img => this.hijab3 = img } src={hijab3} alt="success"  />
+                            <h2 ref={ h2 => this.q3line1 = h2 }>Betol, spa is the word!</h2>
+                            <h2 ref={ h2 => this.q3line2 = h2 }>Next question</h2>
+                            <h2 ref={ h2 => this.q3line3 = h2 }>What's the title of an indo drama</h2>
+                            <h2 ref={ h2 => this.q3line4 = h2 }>In which Agnes Monica lakon</h2>
+                            <h2 ref={ h2 => this.q3line5 = h2 }>And the main theme song is matahariku</h2>
+							<div ref={ div => this.btnContinueQ3 = div}>
+								<Form onSubmit={this.btnContinueQ3Submit}>
+									<FormGroup>
+										<Container>
+											<Row>
+												<Col xs="12">
+													<Input 
+														type="text"
+														name="q3Ans"
+														id="q3Ans"
+														onChange= {this.onAChange}
+														/>
+												</Col>
+											</Row>
+										</Container>
+									</FormGroup>
+									<FormGroup>
+										<Button 
+											color="dark"
+											style={{marginTop: '2rem', backgroundColor: "#73b102"}}
+											block>
+											Check answer
+										</Button>
+									</FormGroup>
+								</Form>
+							</div>
+						</div>
+
+						<div className="q4Content" ref={ div => this.q4Content = div }>
+							<img ref={ img => this.hijab99 = img } src={hijab9} alt="success"  />
+                            <h2 ref={ h2 => this.q4line1 = h2 }>Yay. Append those 2 answers, what do you get?</h2>
+                            <h2 ref={ h2 => this.q4line2 = h2 }>I'm sure u are having questions right now</h2>
+                            <h2 ref={ h2 => this.q4line3 = h2 }>Please don't say anything yet</h2>
+                            <h2 ref={ h2 => this.q4line4 = h2 }>Just accept this gift of mine</h2>
+                            <h2 ref={ h2 => this.q4line5 = h2 }>All will be answered at the end of the day</h2>
+                            <h2 ref={ h2 => this.q4line6 = h2 }>Enjoy urself</h2>
+							<img ref={ img => this.cat = img } src={cat} alt="success" className="catty" />
+                            <h2 ref={ h2 => this.q4line7 = h2 }>Part 2 will continue after ur session is over</h2>
+                            <h2 ref={ h2 => this.q4line8 = h2 }>Another link will be given for part 2 later</h2>
 						</div>
 
                     </div>

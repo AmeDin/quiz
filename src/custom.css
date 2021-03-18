@@ -117,6 +117,31 @@ video {
       display : none;
       visibility: hidden;
   }
+  .videoContent2 {
+      padding-left: 15px;
+      display : none;
+      visibility: hidden;
+  }
+  .q1Content {
+      padding-left: 15px;
+      display : none;
+      visibility: hidden;
+  }
+  .q2Content {
+      padding-left: 15px;
+      display : none;
+      visibility: hidden;
+  }
+  .q3Content {
+      padding-left: 15px;
+      display : none;
+      visibility: hidden;
+  }
+  .q4Content {
+      padding-left: 15px;
+      display : none;
+      visibility: hidden;
+  }
   .feature {
       position: relative;
       float: left;
@@ -179,4 +204,15 @@ video {
 
   .fimg {
     display: none;
+  }
+
+  .catty {
+    width: 520px;
+  }
+  .myform {
+    margin-top: 5px;
+  }
+
+  .center {
+    text-align: center;
   }
