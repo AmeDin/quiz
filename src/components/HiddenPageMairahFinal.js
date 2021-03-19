@@ -7,7 +7,7 @@ import Loading from "./Loading";
 import hijab7 from '../assets/hijab7.gif'
 import hijab3 from '../assets/hijab3.gif'
 import hijab9 from '../assets/hijab9.gif'
-import hijab10 from '../assets/hijab9.gif'
+import hijab10 from '../assets/hijab10.gif'
 import hijab8 from '../assets/hijab8.gif'
 
 const C = CSSPlugin;
