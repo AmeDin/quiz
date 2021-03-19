@@ -4,7 +4,7 @@ import CSSPlugin from 'gsap/CSSPlugin';
 import { Button, Container, Row, Col} from 'reactstrap'
 import Loading from "./Loading";
 import mp3 from '../assets/trimbtbf.mp3'
-import hijab10 from '../assets/hijab10.gif'
+import hijab10 from '../assets/hijab11.gif'
 
 const C = CSSPlugin;
 
@@ -54,6 +54,7 @@ class MairahEpilogue extends Component {
 			.from(this.line5, 2.5, { right: -100, autoAlpha: 0 }, "-=0.25")
 			.from(this.line6, 3, { right: -100, autoAlpha: 0 }, "-=0.25")
 			.from(this.line7, 2.5, { right: -100, autoAlpha: 0 }, "-=0.25")
+			.from(this.line77, 2.5, { right: -100, autoAlpha: 0 }, "-=0.25")
 			.from(this.line8, 2.5, { right: -100, autoAlpha: 0 }, "-=0.25")
 			.from(this.line9, 2.5, { right: -100, autoAlpha: 0 }, "-=0.25")
 			.from(this.line10, 2.5, { right: -100, autoAlpha: 0 }, "-=0.25")
@@ -148,6 +149,7 @@ class MairahEpilogue extends Component {
                             <h2 ref={ h2 => this.line5 = h2 }>Because everytime I think about mai</h2>
                             <h2 ref={ h2 => this.line6 = h2 }>Because it's hard to look at u in the eye</h2>
                             <h2 ref={ h2 => this.line7 = h2 }>Because u makes my heart fly</h2>
+                            <h2 ref={ h2 => this.line77 = h2 }>And no doubt it delights me to be with mai</h2>
                             <h2 ref={ h2 => this.line8 = h2 }>Expressing openly has never been my,</h2>
                             <h2 ref={ h2 => this.line9 = h2 }>forte because I'm very shy</h2>
                             <h2 ref={ h2 => this.line10 = h2 }>Tis' not a lie</h2>
@@ -158,7 +160,7 @@ class MairahEpilogue extends Component {
                             <h2 ref={ h2 => this.line15 = h2 }>Shoulder the hardships that makes u sigh</h2>
                             <h2 ref={ h2 => this.line16 = h2 }>as well as the the place for u to cry</h2>
                             <h2 ref={ h2 => this.line17 = h2 }>I love u Mai</h2>
-							<img ref={ img => this.hijab10 = img } src={hijab10} alt="success" className="catty" />
+							<img ref={ img => this.hijab10 = img } src={hijab10} alt="success" className="hijab" />
 						</div>
 						
 

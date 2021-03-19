@@ -8,6 +8,7 @@ import MaiTimeSequence from './components/MaiTimeSequence';
 import HiddenPageHookMairah from './components/HiddenPageHookMairah';
 import HiddenPageMairahPt2 from './components/HiddenPageMairahPt2';
 import HiddenPageMairahFinal from './components/HiddenPageMairahFinal';
+import HiddenPageMairahFinalTwo from './components/HiddenPageMairahFinalTwo';
 import MairahEpilogue from './components/MairahEpilogue';
 
 function App(props) {
@@ -26,6 +27,7 @@ function App(props) {
           <PrivateRoute path="/hidden" component={HiddenPageHookMairah} />
           <Route exact path="/part2" component={HiddenPageMairahPt2} />
           <Route exact path="/final" component={HiddenPageMairahFinal} />
+          <Route exact path="/encore" component={HiddenPageMairahFinalTwo} />
           <Route exact path="/epi" component={MairahEpilogue} />
       </Router>
     </AuthContext.Provider>

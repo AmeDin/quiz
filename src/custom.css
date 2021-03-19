@@ -216,3 +216,9 @@ video {
   .center {
     text-align: center;
   }
+
+  .hijab {
+    height: 300px;
+    width: 200px;
+    margin-left: 180px;
+  }

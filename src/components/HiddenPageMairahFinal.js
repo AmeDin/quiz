@@ -506,7 +506,7 @@ class HiddenPageMairahFinal extends Component {
 														type="text"
 														name="q2Ans"
 														id="q2Ans"
-														placeholder="e.g if asn is 2x2 matrix [1,2][3,1], if 1x2 [1,1]"
+														placeholder=""
 														onChange= {this.onAChange}
 														/>
 												</Col>
@@ -530,7 +530,7 @@ class HiddenPageMairahFinal extends Component {
                             <h2 ref={ h2 => this.q3line1 = h2 }>Yep, Fluff stack</h2>
                             <h2 ref={ h2 => this.q3line2 = h2 }>I recall u mentioning this last i check</h2>
                             <h2 ref={ h2 => this.q3line3 = h2 }>Whatever u share with me always remain intact</h2>
-                            <h2 ref={ h2 => this.q3line4 = h2 }>In my mind, it remain shack</h2>
+                            <h2 ref={ h2 => this.q3line4 = h2 }>In my mind, it's shacked</h2>
                             <h2 ref={ h2 => this.q3line5 = h2 }>Until i fulfill the contract</h2>
                             <h2 ref={ h2 => this.q3line6 = h2 }>With an action and wait for your ACK</h2>
 							<img ref={ img => this.hijab10 = img } src={hijab10} alt="success" className="catty" />
