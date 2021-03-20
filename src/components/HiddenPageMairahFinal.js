@@ -94,7 +94,14 @@ class HiddenPageMairahFinal extends Component {
         });
     }
 
-    
+	scroller = () => {
+		setTimeout(() => {
+			window.scrollBy({
+				top: -600,
+				behavior: 'smooth'
+			  });
+		  }, 1000);
+	}
 
 	// add instances to the timeline
 	componentDidMount(){
@@ -201,7 +208,7 @@ class HiddenPageMairahFinal extends Component {
 			.to(this.line1, 0.2, { opacity: 0, autoAlpha: 0 })
 			.to(this.hijab7, 0.2, { opacity: 0, autoAlpha: 0 });
 		this.logoTl.play()
-        
+        this.scroller()
 		setTimeout(() => {
 			document.querySelector(".content").style.display = "none"
 			document.querySelector(".videoContent2").style.display = "none"
@@ -219,6 +226,7 @@ class HiddenPageMairahFinal extends Component {
 			.to(this.line1, 0.2, { opacity: 0, autoAlpha: 0 })
 			.to(this.hijab7, 0.2, { opacity: 0, autoAlpha: 0 });
 		this.logoTl.play()
+        this.scroller()
 		
 		setTimeout(() => {
 			document.querySelector(".videoContent").style.display = "none"
@@ -242,6 +250,7 @@ class HiddenPageMairahFinal extends Component {
 			.to(this.vidline6, 0.2, { opacity: 0, autoAlpha: 0 })
 			.to(this.vidline7, 0.2, { opacity: 0, autoAlpha: 0 })
 		this.logoTl2.play()
+        this.scroller()
 		setTimeout(() => {
 			document.querySelector(".videoContent").style.display = "none";
             document.querySelector(".q1Content").style.display = "inline";
@@ -262,6 +271,7 @@ class HiddenPageMairahFinal extends Component {
 			.to(this.vid2line6, 0.2, { opacity: 0, autoAlpha: 0 })
 			.to(this.vid2line7, 0.2, { opacity: 0, autoAlpha: 0 })
 		this.logoTl2fun.play()
+        this.scroller()
 		// setTimeout(() => {
 		// 	window.scrollBy({
 		// 		top: 300,
@@ -292,6 +302,7 @@ class HiddenPageMairahFinal extends Component {
 				.to(this.q1line2, 0.5, { opacity: 0, autoAlpha: 0 })
 				.to(this.q1line3, 0.5, { opacity: 0, autoAlpha: 0 })
 			this.logoTl3.play()
+			this.scroller()
 			
 			setTimeout(() => {
 				document.querySelector(".q1Content").style.display = "none"
@@ -315,6 +326,7 @@ class HiddenPageMairahFinal extends Component {
 				.to(this.q2line2, 0.2, { opacity: 0, autoAlpha: 0 })
 				.to(this.q2line1, 0.2, { opacity: 0, autoAlpha: 0 });
 			this.logoTl4.play()
+			this.scroller()
 
 			
 			setTimeout(() => {
@@ -332,6 +344,7 @@ class HiddenPageMairahFinal extends Component {
 			document.getElementById("q3Ans").value.toLowerCase() == "200"
 		){
 			
+			this.scroller()
 			setTimeout(() => {
 				document.querySelector(".q3Content").style.display = "none"
 				document.querySelector(".q4Content").style.display = "inline"

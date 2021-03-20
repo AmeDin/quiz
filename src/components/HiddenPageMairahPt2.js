@@ -97,6 +97,14 @@ class HiddenPagePt2 extends Component {
     }
 
     
+	scroller = () => {
+		setTimeout(() => {
+			window.scrollBy({
+				top: -600,
+				behavior: 'smooth'
+			  });
+		  }, 1000);
+	}
 
 	// add instances to the timeline
 	componentDidMount(){
@@ -210,6 +218,7 @@ class HiddenPagePt2 extends Component {
 			.to(this.line1, 0.2, { opacity: 0, autoAlpha: 0 })
 			.to(this.hijab6, 0.2, { opacity: 0, autoAlpha: 0 });
 		this.logoTl.play()
+		this.scroller()
         
 		setTimeout(() => {
 			document.querySelector(".content").style.display = "none"
@@ -228,6 +237,7 @@ class HiddenPagePt2 extends Component {
 			.to(this.line1, 0.2, { opacity: 0, autoAlpha: 0 })
 			.to(this.hijab6, 0.2, { opacity: 0, autoAlpha: 0 });
 		this.logoTl.play()
+		this.scroller()
 		
 		setTimeout(() => {
 			document.querySelector(".videoContent").style.display = "none"
@@ -255,6 +265,7 @@ class HiddenPagePt2 extends Component {
 			.to(this.vidline10, 0.2, { opacity: 0, autoAlpha: 0 })
 			.to(this.vidline11, 0.2, { opacity: 0, autoAlpha: 0 })
 		this.logoTl2.play()
+		this.scroller()
 		setTimeout(() => {
 			document.querySelector(".videoContent").style.display = "none";
             document.querySelector(".q1Content").style.display = "inline";
@@ -280,6 +291,7 @@ class HiddenPagePt2 extends Component {
 			.to(this.vid2line11, 0.2, { opacity: 0, autoAlpha: 0 })
 			.to(this.vid2line12, 0.2, { opacity: 0, autoAlpha: 0 })
 		this.logoTl2fun.play()
+		this.scroller()
 		// setTimeout(() => {
 		// 	window.scrollBy({
 		// 		top: 300,
@@ -310,6 +322,7 @@ class HiddenPagePt2 extends Component {
 				.to(this.btnContinueQ1, 0.5, { opacity: 0, autoAlpha: 0 })
 				.to(this.wordpuzzle, 0.2, { opacity: 0, autoAlpha: 0 });
 			this.logoTl3.play()
+			this.scroller()
 			
 			setTimeout(() => {
 				document.querySelector(".q1Content").style.display = "none"
@@ -334,6 +347,7 @@ class HiddenPagePt2 extends Component {
 				.to(this.q2line2, 0.2, { opacity: 0, autoAlpha: 0 })
 				.to(this.q2line1, 0.2, { opacity: 0, autoAlpha: 0 });
 			this.logoTl4.play()
+			this.scroller()
 
 			
 			setTimeout(() => {
@@ -355,6 +369,7 @@ class HiddenPagePt2 extends Component {
 				document.querySelector(".q3Content").style.display = "none"
 				document.querySelector(".q4Content").style.display = "inline"
 				this.logoTl6.play()
+				this.scroller()
 			}, 2000);
 		}
 	}

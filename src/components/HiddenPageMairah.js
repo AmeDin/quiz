@@ -93,6 +93,14 @@ class HiddenPageV3 extends Component {
     }
 
     
+	scroller = () => {
+		setTimeout(() => {
+			window.scrollBy({
+				top: -600,
+				behavior: 'smooth'
+			  });
+		  }, 1000);
+	}
 
 	// add instances to the timeline
 	componentDidMount(){
@@ -203,7 +211,7 @@ class HiddenPageV3 extends Component {
 			// .from(this.btnBack, 3, { scale: .5, autoAlpha: 0 }, "feature");
 		
 			this.bgTl.play()
-			
+			this.scroller()
 			setTimeout(() => {
 				this.logoTl.play()
 				}, 5000);
@@ -218,6 +226,7 @@ class HiddenPageV3 extends Component {
 			.to(this.line1, 0.2, { opacity: 0, autoAlpha: 0 })
 			.to(this.linenegate, 0.2, { opacity: 0, autoAlpha: 0 });
 		this.logoTlB.play()
+		this.scroller()
         
 		setTimeout(() => {
 			document.querySelector(".content").style.display = "none"
@@ -236,6 +245,7 @@ class HiddenPageV3 extends Component {
 			.to(this.line1, 0.2, { opacity: 0, autoAlpha: 0 })
 			.to(this.linenegate, 0.2, { opacity: 0, autoAlpha: 0 });
 		this.logoTlB.play()
+		this.scroller()
 		
 		setTimeout(() => {
 			document.querySelector(".content").style.display = "none"
@@ -264,6 +274,7 @@ class HiddenPageV3 extends Component {
 			.to(this.vidline11, 0.2, { opacity: 0, autoAlpha: 0 })
 			.to(this.vidline12, 0.2, { opacity: 0, autoAlpha: 0 })
 		this.logoTl2.play()
+		this.scroller()
 		setTimeout(() => {
 			document.querySelector(".videoContent").style.display = "none";
             document.querySelector(".q1Content").style.display = "inline";
@@ -289,6 +300,7 @@ class HiddenPageV3 extends Component {
 			.to(this.vid2line11, 0.2, { opacity: 0, autoAlpha: 0 })
 			.to(this.vid2line12, 0.2, { opacity: 0, autoAlpha: 0 })
 		this.logoTl2fun.play()
+			this.scroller()
 		setTimeout(() => {
 			window.scrollBy({
 				top: 300,
@@ -326,6 +338,7 @@ class HiddenPageV3 extends Component {
 				.to(this.q1line2, 0.2, { opacity: 0, autoAlpha: 0 })
 				.to(this.q1line1, 0.2, { opacity: 0, autoAlpha: 0 });
 			this.logoTl3.play()
+			this.scroller()
 			
 			setTimeout(() => {
 				document.querySelector(".q1Content").style.display = "none"
@@ -356,6 +369,7 @@ class HiddenPageV3 extends Component {
 				.to(this.q2line2, 0.2, { opacity: 0, autoAlpha: 0 })
 				.to(this.q2line1, 0.2, { opacity: 0, autoAlpha: 0 });
 			this.logoTl4.play()
+			this.scroller()
 
 			
 			setTimeout(() => {
@@ -373,6 +387,7 @@ class HiddenPageV3 extends Component {
 			document.getElementById("q3Ans").value.toLowerCase() == "jelita"
 		){
 			
+			this.scroller()
 			setTimeout(() => {
 				document.querySelector(".q3Content").style.display = "none"
 				document.querySelector(".q4Content").style.display = "inline"
