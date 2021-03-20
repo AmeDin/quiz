@@ -3,7 +3,7 @@ import { TimelineLite } from 'gsap/all';
 import CSSPlugin from 'gsap/CSSPlugin';
 import { Button, Container, Row, Col} from 'reactstrap'
 import Loading from "./Loading";
-import mp3 from '../assets/trimbtbf.mp3'
+import mp3 from '../assets/03Romance.mp3'
 import hijab10 from '../assets/hijab11.gif'
 
 const C = CSSPlugin;
@@ -119,7 +119,7 @@ class MairahEpilogue extends Component {
 						<div className="begin" ref={ div => this.begin = div }>
                             <div ref={ div => this.bhead = div}><Loading /></div>
 							<h2 ref={ h2 => this.bline1 = h2 }>It's goodbye for tonight</h2>
-                            <h2 ref={ h2 => this.bline2 = h2 }>Already gonna miss as soon as u are no longer in sight</h2>
+                            <h2 ref={ h2 => this.bline2 = h2 }>Already gonna miss u as soon as u're no longer in sight</h2>
                             <h2 ref={ h2 => this.bline3 = h2 }>Time for today story closure last ride</h2>
 							<div ref={ div => this.btnContinue = div}>
 								<Container>

@@ -450,7 +450,7 @@ class HiddenPageMairahFinal extends Component {
 						
 							<h2 ref={ h2 => this.q1line0 = h2 }>A. On which month did Amir confess to mairah?</h2>
 							<h2 ref={ h2 => this.q1line1 = h2 }>B. Solve the following function</h2>
-							<h2 ref={ h2 => this.q1line2 = h2 }>f(x) = 5x - 2x + 18x + 9x - 7x</h2>
+							<h2 ref={ h2 => this.q1line2 = h2 }>f(5) = 5x - 2x + 18x + 9x - 7x</h2>
 							<h2 ref={ h2 => this.q1line3 = h2 }>Next stop: #0A-B</h2>
 							<div ref={ div => this.btnContinueQ1 = div}>
 								<Form onSubmit={this.btnContinueQ1Submit}>
